@@ -12,38 +12,40 @@ class Language extends GetView<ChangeLocaleController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Container(
-          padding: const EdgeInsets.all(15),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(AppImageAssets.logoimage),
-              Text(
-                "1".tr,
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.headlineMedium,
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              CustomLanguageButton(
-                buttonName: "Ar",
-                onPressed: () {
-                  controller.changelang("ar");
-                  Get.toNamed(AppRoutes.onBoarding);
-                },
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              CustomLanguageButton(
-                buttonName: "En",
-                onPressed: () {
-                  controller.changelang("en");
-                  Get.toNamed(AppRoutes.onBoarding);
-                },
-              ),
-            ],
+        child: SingleChildScrollView(
+          child: Container(
+            padding: const EdgeInsets.all(15),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(AppImageAssets.logoimage),
+                Text(
+                  "1".tr,
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.headlineMedium,
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                CustomLanguageButton(
+                  buttonName: "Ar",
+                  onPressed: () {
+                    controller.changelang("ar");
+                    Get.toNamed(AppRoutes.onBoarding);
+                  },
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                CustomLanguageButton(
+                  buttonName: "En",
+                  onPressed: () {
+                    controller.changelang("en");
+                    Get.toNamed(AppRoutes.onBoarding);
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       ),

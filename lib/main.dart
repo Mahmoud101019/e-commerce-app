@@ -27,6 +27,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: "PlayfairDisplay",
         textTheme: const TextTheme(
+          headlineLarge: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 25,
+          ),
           headlineMedium: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 20,
@@ -35,8 +39,12 @@ class MyApp extends StatelessWidget {
             fontSize: 16,
             color: AppColor.grey,
           ),
+          bodySmall: TextStyle(
+            fontSize: 14,
+            color: AppColor.grey,
+          ),
         ),
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: AppColor.primaryColor),
         useMaterial3: true,
       ),
       home: const Language(),
