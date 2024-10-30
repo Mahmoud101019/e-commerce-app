@@ -4,13 +4,15 @@ class Customtextformauth extends StatelessWidget {
   final String hinttext;
   final String lable;
   final Icon icon;
-  final TextEditingController? controller;
+  final Icon? prefixIcon;
+  final TextEditingController controller;
   const Customtextformauth({
     super.key,
     required this.hinttext,
     required this.lable,
     required this.icon,
-    this.controller,
+    required this.controller,
+    this.prefixIcon,
   });
 
   @override
@@ -30,6 +32,7 @@ class Customtextformauth extends StatelessWidget {
           hintText: hinttext,
           hintStyle: Theme.of(context).textTheme.bodySmall,
           suffixIcon: icon,
+          prefixIcon: prefixIcon,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(30),
           ),

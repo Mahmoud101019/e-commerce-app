@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Customforgetpasswordsection extends StatelessWidget {
   const Customforgetpasswordsection({super.key});
@@ -9,7 +10,7 @@ class Customforgetpasswordsection extends StatelessWidget {
       alignment: Alignment.topRight,
       child: TextButton(
         child: Text(
-          "Forget Password",
+          "15".tr,
         ),
         onPressed: () {},
       ),

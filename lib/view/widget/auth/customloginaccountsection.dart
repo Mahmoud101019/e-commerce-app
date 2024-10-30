@@ -2,9 +2,9 @@ import 'package:e_commerce_app/core/constant/colormanager.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class Customcreateaccountsection extends StatelessWidget {
+class CustomLogInAccountSection extends StatelessWidget {
   final void Function() onPressed;
-  const Customcreateaccountsection({
+  const CustomLogInAccountSection({
     super.key,
     required this.onPressed,
   });
@@ -15,12 +15,12 @@ class Customcreateaccountsection extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          "16".tr,
+          "23".tr,
         ),
         TextButton(
           onPressed: onPressed,
           child: Text(
-            "17".tr,
+            "11".tr,
             style: TextStyle(
               color: AppColor.primaryColor,
             ),
