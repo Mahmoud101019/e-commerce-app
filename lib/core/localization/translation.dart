@@ -29,6 +29,11 @@ class MyTranslation extends Translations {
           "21": "أدخل رقم هاتفك",
           "22": "هاتف",
           "23": "! لديك حساب بالفعل",
+          "24": "تحقق من البريد الالكتروني",
+          "25": "تعين كلمة مرور جديدة",
+          "26": "تحقق",
+          "27":
+              "أدخل عنوان البريد الإلكتروني الذي استخدمته عند انضمامك وسنرسل لك تعليمات لإعادة تعيين كلمة المرور الخاصة بك.",
         },
         "en": {
           "1": "Hello ! \n  Please Select The Application Language",
@@ -56,6 +61,11 @@ class MyTranslation extends Translations {
           "21": "Enter Your PhoneNumber",
           "22": "Phone",
           "23": "already have account !",
+          "24": "Check Email",
+          "25": "Forget Password",
+          "26": "Check",
+          "27":
+              "Enter the email address you used when you joined and we’ll send you instructions to reset your password.",
         },
       };
 }

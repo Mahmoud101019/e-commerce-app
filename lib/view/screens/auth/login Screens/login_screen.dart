@@ -1,19 +1,21 @@
-import 'package:e_commerce_app/controller/auth/signup_controller.dart';
+import 'package:e_commerce_app/controller/auth/login%20controllers/login_controller.dart';
 import 'package:e_commerce_app/core/constant/colormanager.dart';
 import 'package:e_commerce_app/view/widget/auth/custombuttonauth.dart';
-import 'package:e_commerce_app/view/widget/auth/customloginaccountsection.dart';
+import 'package:e_commerce_app/view/widget/auth/customcreateaccountsection.dart';
+import 'package:e_commerce_app/view/widget/auth/customforgetpasswordsection.dart';
 import 'package:e_commerce_app/view/widget/auth/customlogo.dart';
+import 'package:e_commerce_app/view/widget/auth/customtextbodyauth.dart';
 import 'package:e_commerce_app/view/widget/auth/customtextformauth.dart';
 import 'package:e_commerce_app/view/widget/auth/customtexttitleauth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class SignupScreen extends StatelessWidget {
-  const SignupScreen({super.key});
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    SignUpControllerImpl controller = Get.put(SignUpControllerImpl());
+    LoginControllerImpl controller = Get.put(LoginControllerImpl());
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
@@ -21,7 +23,7 @@ class SignupScreen extends StatelessWidget {
           elevation: 0.0,
           centerTitle: true,
           title: Text(
-            "17".tr,
+            "11".tr,
             style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                   color: AppColor.grey,
                 ),
@@ -32,21 +34,12 @@ class SignupScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
           child: ListView(
             children: [
-              Customtexttitleauth(
-                texttitle: "18".tr,
-              ),
               const Customlogo(),
-              Customtextformauth(
-                controller: controller.username,
-                hinttext: "19".tr,
-                icon: Icon(Icons.person_2_outlined),
-                lable: "20".tr,
+              Customtexttitleauth(
+                texttitle: "8".tr,
               ),
-              Customtextformauth(
-                controller: controller.phonenumber,
-                hinttext: "21".tr,
-                icon: Icon(Icons.phone_android_outlined),
-                lable: "22".tr,
+              Customtextbodyauth(
+                textbody: "9".tr,
               ),
               Customtextformauth(
                 controller: controller.email,
@@ -61,13 +54,18 @@ class SignupScreen extends StatelessWidget {
                 lable: "14".tr,
                 prefixIcon: Icon(Icons.lock_outline),
               ),
+              Customforgetpasswordsection(
+                onPressed: () {
+                  controller.goToForgetPassword();
+                },
+              ),
               Custombuttonauth(
-                text: "17".tr,
+                text: "11".tr,
                 onPressed: () {},
               ),
-              CustomLogInAccountSection(
+              Customcreateaccountsection(
                 onPressed: () {
-                  controller.goPageLogin();
+                  controller.goPageSignUp();
                 },
               )
             ],

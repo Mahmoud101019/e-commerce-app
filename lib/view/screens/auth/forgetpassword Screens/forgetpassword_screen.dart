@@ -1,8 +1,6 @@
-import 'package:e_commerce_app/controller/auth/login_controller.dart';
+import 'package:e_commerce_app/controller/auth/ForgetPassword%20Controller/forgetpassword_controller.dart';
 import 'package:e_commerce_app/core/constant/colormanager.dart';
 import 'package:e_commerce_app/view/widget/auth/custombuttonauth.dart';
-import 'package:e_commerce_app/view/widget/auth/customcreateaccountsection.dart';
-import 'package:e_commerce_app/view/widget/auth/customforgetpasswordsection.dart';
 import 'package:e_commerce_app/view/widget/auth/customlogo.dart';
 import 'package:e_commerce_app/view/widget/auth/customtextbodyauth.dart';
 import 'package:e_commerce_app/view/widget/auth/customtextformauth.dart';
@@ -10,12 +8,13 @@ import 'package:e_commerce_app/view/widget/auth/customtexttitleauth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class ForgetpasswordScreen extends StatelessWidget {
+  const ForgetpasswordScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    LoginControllerImpl controller = Get.put(LoginControllerImpl());
+    ForgetPasswordControllerImpl controller =
+        Get.put(ForgetPasswordControllerImpl());
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
@@ -23,7 +22,7 @@ class LoginScreen extends StatelessWidget {
           elevation: 0.0,
           centerTitle: true,
           title: Text(
-            "11".tr,
+            "25".tr,
             style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                   color: AppColor.grey,
                 ),
@@ -31,39 +30,29 @@ class LoginScreen extends StatelessWidget {
         ),
         backgroundColor: AppColor.backgroundColor,
         body: Container(
-          padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+          padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 30),
           child: ListView(
             children: [
               const Customlogo(),
               Customtexttitleauth(
-                texttitle: "8".tr,
+                texttitle: "24".tr,
               ),
               Customtextbodyauth(
-                textbody: "9".tr,
+                textbody: "27".tr,
               ),
               Customtextformauth(
                 controller: controller.email,
                 hinttext: "10".tr,
-                icon: Icon(Icons.email_outlined),
+                icon: Icon(Icons.person_2_outlined),
                 lable: "12".tr,
               ),
-              Customtextformauth(
-                controller: controller.password,
-                hinttext: "13".tr,
-                icon: Icon(Icons.visibility_outlined),
-                lable: "14".tr,
-                prefixIcon: Icon(Icons.lock_outline),
+              SizedBox(
+                height: 40,
               ),
-              Customforgetpasswordsection(),
               Custombuttonauth(
-                text: "11".tr,
+                text: "26".tr,
                 onPressed: () {},
               ),
-              Customcreateaccountsection(
-                onPressed: () {
-                  controller.goPageSignUp();
-                },
-              )
             ],
           ),
         ),
