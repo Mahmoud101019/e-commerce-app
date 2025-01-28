@@ -1,20 +1,18 @@
-import 'package:e_commerce_app/controller/auth/ForgetPassword%20Controller/forgetpassword_controller.dart';
+import 'package:e_commerce_app/controller/auth/Sign%20Up%20Controllers/Check%20Email%20Controller/check_email_controller.dart';
 import 'package:e_commerce_app/core/constant/colormanager.dart';
 import 'package:e_commerce_app/view/widget/auth/custombuttonauth.dart';
 import 'package:e_commerce_app/view/widget/auth/customforgetlogo.dart';
-import 'package:e_commerce_app/view/widget/auth/customtextbodyauth.dart';
 import 'package:e_commerce_app/view/widget/auth/customtextformauth.dart';
 import 'package:e_commerce_app/view/widget/auth/customtexttitleauth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class ForgetpasswordScreen extends StatelessWidget {
-  const ForgetpasswordScreen({super.key});
+class CheckEmailScreen extends StatelessWidget {
+  const CheckEmailScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    ForgetPasswordControllerImpl controller =
-        Get.put(ForgetPasswordControllerImpl());
+    CheckEmailControllerImpl controller = Get.put(CheckEmailControllerImpl());
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
@@ -22,7 +20,7 @@ class ForgetpasswordScreen extends StatelessWidget {
           elevation: 0.0,
           centerTitle: true,
           title: Text(
-            "25".tr,
+            "35".tr,
             style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                   color: AppColor.grey,
                 ),
@@ -30,15 +28,15 @@ class ForgetpasswordScreen extends StatelessWidget {
         ),
         backgroundColor: AppColor.backgroundColor,
         body: Container(
-          padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 30),
+          padding: const EdgeInsets.symmetric(vertical: 100, horizontal: 30),
           child: ListView(
             children: [
               const Customforgetlogo(),
-              Customtexttitleauth(
-                texttitle: "24".tr,
+              SizedBox(
+                height: 20,
               ),
-              Customtextbodyauth(
-                textbody: "27".tr,
+              Customtexttitleauth(
+                texttitle: "36".tr,
               ),
               Customtextformauth(
                 controller: controller.email,
@@ -47,12 +45,12 @@ class ForgetpasswordScreen extends StatelessWidget {
                 lable: "12".tr,
               ),
               SizedBox(
-                height: 40,
+                height: 20,
               ),
               Custombuttonauth(
                 text: "26".tr,
                 onPressed: () {
-                  controller.goVerifyCode();
+                  controller.goSuccessSignup();
                 },
               ),
             ],

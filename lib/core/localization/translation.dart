@@ -34,6 +34,18 @@ class MyTranslation extends Translations {
           "26": "تحقق",
           "27":
               "أدخل عنوان البريد الإلكتروني الذي استخدمته عند انضمامك وسنرسل لك تعليمات لإعادة تعيين كلمة المرور الخاصة بك.",
+          "28": "رمز التحقق",
+          "29":
+              "بعد إدخال بريدك الإلكتروني، ستتلقى رسالة نصية تحتوي على رقم التحقق عبر الرسائل القصيرة على هاتفك الذكي",
+          "30": "إعادة تعيين كلمة المرور",
+          "31": "كلمة المرور الجديدة",
+          "32": "الرجاء إدخال كلمة المرور الجديدة",
+          "33": "تأكيد كلمة المرور الجديدة",
+          "34": "حفظ",
+          "35": "تحقق البريد ألالكتروني",
+          "36": "عملية ناجحة",
+          "37": "تم إنشاء الحساب بنجاح",
+          "38": "أستكمال",
         },
         "en": {
           "1": "Hello ! \n  Please Select The Application Language",
@@ -66,6 +78,18 @@ class MyTranslation extends Translations {
           "26": "Check",
           "27":
               "Enter the email address you used when you joined and we’ll send you instructions to reset your password.",
+          "28": "verification code",
+          "29":
+              "After entering your Email, you'll receive a text message with an SMS verification number on your smartphone",
+          "30": "reset password",
+          "31": "New Password",
+          "32": "Please Enter New Password",
+          "33": "Confirm New Password",
+          "34": "Save",
+          "35": "Check Email",
+          "36": "Success SignUp",
+          "37": "Created Account Successfully",
+          "38": "Continue",
         },
       };
 }

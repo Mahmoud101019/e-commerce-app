@@ -63,7 +63,9 @@ class SignupScreen extends StatelessWidget {
               ),
               Custombuttonauth(
                 text: "17".tr,
-                onPressed: () {},
+                onPressed: () {
+                  controller.signup();
+                },
               ),
               CustomLogInAccountSection(
                 onPressed: () {

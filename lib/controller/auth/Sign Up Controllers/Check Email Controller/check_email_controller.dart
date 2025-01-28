@@ -2,22 +2,22 @@ import 'package:e_commerce_app/core/constant/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-abstract class ForgetpasswordController extends GetxController {
+abstract class CheckEmailController extends GetxController {
   checkEmail();
 
-  goVerifyCode();
+  goSuccessSignup();
 }
 
-class ForgetPasswordControllerImpl extends ForgetpasswordController {
+class CheckEmailControllerImpl extends CheckEmailController {
   late TextEditingController email;
 
   @override
-  goVerifyCode() {
-    Get.toNamed(AppRoutes.verifyCode);
-  }
+  checkEmail() {}
 
   @override
-  checkEmail() {}
+  goSuccessSignup() {
+    Get.offAllNamed(AppRoutes.successSignupScreen);
+  }
 
   @override
   void onInit() {
