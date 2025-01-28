@@ -1,4 +1,5 @@
 import 'package:e_commerce_app/controller/onboarding_controller/onboarding_controller.dart';
+import 'package:e_commerce_app/core/constant/colormanager.dart';
 import 'package:e_commerce_app/data/datasource/static/static.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -22,7 +23,10 @@ class Customslideronboarding extends GetView<OnboardingControllerImpl> {
             ),
             Text(
               onBoardingList[index].title!,
-              style: Theme.of(context).textTheme.headlineMedium,
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+              ),
             ),
             const SizedBox(
               height: 100,
@@ -36,7 +40,10 @@ class Customslideronboarding extends GetView<OnboardingControllerImpl> {
               alignment: Alignment.center,
               child: Text(
                 onBoardingList[index].body!,
-                style: Theme.of(context).textTheme.bodyMedium,
+                style: TextStyle(
+                  fontSize: 16,
+                  color: AppColor.grey,
+                ),
                 textAlign: TextAlign.center,
               ),
             ),
